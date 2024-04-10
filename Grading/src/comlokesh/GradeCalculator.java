@@ -87,6 +87,11 @@ public class GradeCalculator extends JFrame {
 		table.setBackground(new Color(173, 216, 230));
 		table.setBounds(270, 349, 1, 1);
 		contentPane.add(table);
+		
+		JLabel lblNewLabel_1 = new JLabel("Student ID");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_1.setBounds(10, 87, 98, 14);
+		contentPane.add(lblNewLabel_1);
 
 
 
