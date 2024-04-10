@@ -92,6 +92,11 @@ public class GradeCalculator extends JFrame {
 		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblNewLabel_1.setBounds(10, 87, 98, 14);
 		contentPane.add(lblNewLabel_1);
+		
+		textField = new JTextField();
+		textField.setBounds(97, 85, 92, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
 
 
 
