@@ -101,8 +101,22 @@ public class GradeCalculator extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("Student Name");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblNewLabel_2.setBounds(270, 87, 98, 14);
-		contentPane.add(lblNewLabel_2)
-
+		contentPane.add(lblNewLabel_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(378, 85, 158, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		String columns[] = {
+				"Course Name", "Credits", "Grade"
+			};
+		DefaultTableModel model = new DefaultTableModel();
+		model.setColumnIdentifiers(columns);
+		
+		
+		
+		
+ 
 
 
 
