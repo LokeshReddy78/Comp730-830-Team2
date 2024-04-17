@@ -113,6 +113,10 @@ public class GradeCalculator extends JFrame {
 		DefaultTableModel model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
+		scrollPane.setBounds(10, 266, 317, 237);
+		contentPane.add(scrollPane);
 		
 		
 		
