@@ -118,9 +118,14 @@ public class GradeCalculator extends JFrame {
 		scrollPane.setBounds(10, 266, 317, 237);
 		contentPane.add(scrollPane);
 		
+		table_1 = new JTable();
+		scrollPane.setViewportView(table_1);
+		table_1.setBackground(new Color(255, 255, 255));
+		table_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+		table_1.setRowSelectionAllowed(false);
+		table_1.setModel(model);
+		table_1.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
-		
- 
 
 
 
