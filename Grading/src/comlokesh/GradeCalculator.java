@@ -113,6 +113,12 @@ public class GradeCalculator extends JFrame {
 		DefaultTableModel model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
+		JLabel lblNewLabel_3 = new JLabel("Course Name");
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_3.setBounds(10, 149, 98, 14);
+		contentPane.add(lblNewLabel_3);
+
+		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
 		scrollPane.setBounds(10, 266, 317, 237);
