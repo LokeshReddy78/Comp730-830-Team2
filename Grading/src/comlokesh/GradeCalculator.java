@@ -142,6 +142,8 @@ public class GradeCalculator extends JFrame {
 		 textField_4.setBounds(141, 219, 185, 20);
 		 contentPane.add(textField_4);
 		 textField_4.setColumns(10);
+		 
+		 textField_6 = new JTextField();
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
