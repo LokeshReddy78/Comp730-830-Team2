@@ -326,21 +326,7 @@ public class GradeCalculator extends JFrame {
 		btnNewButton_3.setBounds(378, 251, 158, 23);
 		contentPane.add(btnNewButton_3);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(378, 436, 86, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
 		
-		JLabel lblNewLabel_6 = new JLabel("Final GPA");
-		lblNewLabel_6.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblNewLabel_6.setBounds(378, 411, 88, 14);
-		contentPane.add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("Total Credits");
-		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblNewLabel_7.setBounds(378, 355, 86, 14);
-		contentPane.add(lblNewLabel_7);
-
 
 
 
