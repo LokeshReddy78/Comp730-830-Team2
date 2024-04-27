@@ -159,6 +159,7 @@ public class GradeCalculator extends JFrame {
 		 contentPane.add(lblNewLabel_8);
 		 
 		 JLabel lblNewLabel_9 = new JLabel("Final Grade");
+		 lblNewLabel_9.setFont(new Font("Times New Roman", Font.BOLD, 14));
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
