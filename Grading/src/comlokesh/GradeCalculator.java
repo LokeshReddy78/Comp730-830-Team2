@@ -310,6 +310,12 @@ public class GradeCalculator extends JFrame {
 		lblNewLabel_6.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblNewLabel_6.setBounds(378, 411, 88, 14);
 		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("Total Credits");
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_7.setBounds(378, 355, 86, 14);
+		contentPane.add(lblNewLabel_7);
+
 
 
 
