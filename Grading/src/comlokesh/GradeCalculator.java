@@ -156,6 +156,150 @@ public class GradeCalculator extends JFrame {
 		table_1.setModel(model);
 		table_1.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
+		
+		JButton btnNewButton = new JButton("Add Course Data");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!textField_2.getText().equals("")&&!textField_3.getText().equals("")&&!textField_4.getText().equals("")) {
+			
+					String course[] = {textField_2.getText(),textField_3.getText(),textField_4.getText().toUpperCase()};
+					DefaultTableModel tbModel1= (DefaultTableModel)table_1.getModel();
+					tbModel1.addRow(course);
+					HashMap<String, Integer> gradevalue = new HashMap<>();
+					gradevalue.put("A", 4);
+					gradevalue.put("B", 3);
+					gradevalue.put("C", 2);
+					gradevalue.put("D", 1);
+					gradevalue.put("F", 0);
+					double totalGradePoints =textField_7.getText().equals("")?0.0:Double.parseDouble(textField_7.getText());
+					int totalCredits=textField_6.getText().equals("")?0:Integer.parseInt(textField_6.getText());
+					totalCredits += Integer.parseInt(course[1]);
+					totalGradePoints += gradevalue.get(course[2])*Integer.parseInt(course[1]);
+					textField_6.setText(String.valueOf(totalCredits));
+					textField_7.setText(String.valueOf(totalGradePoints));
+					textField_2.setText("");
+					textField_3.setText("");
+					textField_4.setText("");
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton.setBounds(378, 146, 158, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Calculate GPA");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//GPA Calculation
+				double gpa = 0.0f;
+				double totalGradePoints =Double.parseDouble(textField_7.getText());
+				int totalCredits=Integer.parseInt(textField_6.getText());;
+				DecimalFormat df_obj = new DecimalFormat("#.##");
+				gpa = totalGradePoints/totalCredits;
+				textField_5.setText(df_obj.format(gpa));
+				//Grade calculation
+				if (Double.parseDouble(textField_5.getText()) == 4)
+				{
+					textField_8.setText("A");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 3.7) {
+					textField_8.setText("A-");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 3.3) {
+					textField_8.setText("B+");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 3) {
+					textField_8.setText("B");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 2.7) {
+					textField_8.setText("B-");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 2.3) {
+					textField_8.setText("C+");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 2) {
+					textField_8.setText("C");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 1.7) {
+					textField_8.setText("C-");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 1.3) {
+					textField_8.setText("D+");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 1) {
+					textField_8.setText("D");
+				}
+				else if (Double.parseDouble(textField_5.getText()) >= 0.7) {
+					textField_8.setText("D-");
+				}
+				else {
+					textField_8.setText("F");
+				}
+			}
+		});
+		btnNewButton_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton_1.setBounds(378, 182, 158, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Clear");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_3.setText("");
+				textField_4.setText("");
+				textField_5.setText("");
+				textField_6.setText("");
+				textField_7.setText("");
+				textField_8.setText("");
+				DefaultTableModel tableModel= (DefaultTableModel)table_1.getModel();
+				while (tableModel.getRowCount()>0)
+		          {
+		             tableModel.removeRow(0);
+		          }
+			}
+		});
+		btnNewButton_2.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton_2.setBounds(378, 217, 158, 23);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Export");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+
+					DefaultTableModel tableModel= (DefaultTableModel)table_1.getModel();
+					String filepath = "C:\\Users\\Abhilash\\Downloads\\"+textField_1.getText()+"_"+textField.getText()+".csv";
+			        FileWriter csv = new FileWriter(new File(filepath));
+
+			        for (int i = 0; i < model.getColumnCount(); i++) {
+			            csv.write(model.getColumnName(i) + ",");
+			        }
+
+			        csv.write("\n");
+
+			        for (int i = 0; i < model.getRowCount(); i++) {
+			            for (int j = 0; j < model.getColumnCount(); j++) {
+			                csv.write(model.getValueAt(i, j).toString() + ",");
+			            }
+			            csv.write("\n");
+			        }
+
+			        csv.close();
+			        
+			    } catch (IOException ie) {
+			        ie.printStackTrace();
+			    }
+				
+				
+			}
+		});
+
+		
+		
+		
 
 
 
