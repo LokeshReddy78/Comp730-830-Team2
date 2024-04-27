@@ -296,6 +296,11 @@ public class GradeCalculator extends JFrame {
 				
 			}
 		});
+		
+		btnNewButton_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton_3.setBounds(378, 251, 158, 23);
+		contentPane.add(btnNewButton_3);
+
 
 		
 		
