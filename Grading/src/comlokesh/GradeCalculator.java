@@ -1,4 +1,5 @@
 package comlokesh;
+
 import java.awt.EventQueue;
 
 
@@ -30,10 +31,8 @@ import javax.swing.border.LineBorder;
 import java.awt.Label;
 import javax.swing.JScrollPane;
 
-
-
 public class GradeCalculator extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
@@ -113,61 +112,6 @@ public class GradeCalculator extends JFrame {
 		DefaultTableModel model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
-		JLabel lblNewLabel_3 = new JLabel("Course Name");
-		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblNewLabel_3.setBounds(10, 149, 98, 14);
-		contentPane.add(lblNewLabel_3);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(141, 147, 185, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
-		
-		 JLabel lblNewLabel_4 = new JLabel("Credits");
-		 lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		 lblNewLabel_4.setBounds(10, 185, 63, 14);
-		 contentPane.add(lblNewLabel_4);
-
-		 textField_3 = new JTextField();
-		 textField_3.setBounds(141, 183, 185, 20);
-		 contentPane.add(textField_3);
-		 textField_3.setColumns(10);
-		 
-		 JLabel lblNewLabel_5 = new JLabel("Grade");
-		 lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		 lblNewLabel_5.setBounds(10, 221, 46, 14);
-		 contentPane.add(lblNewLabel_5);
-		 
-		 textField_4 = new JTextField();
-		 textField_4.setBounds(141, 219, 185, 20);
-		 contentPane.add(textField_4);
-		 textField_4.setColumns(10);
-
-		 textField_6 = new JTextField();
-		 textField_6.setBounds(378, 380, 86, 20);
-		 contentPane.add(textField_6);
-		 textField_6.setColumns(10);
-		 
-		 textField_7 = new JTextField();
-		 textField_7.setBounds(378, 324, 86, 20);
-		 contentPane.add(textField_7);
-		 textField_7.setColumns(10);
-		 
-		 JLabel lblNewLabel_8 = new JLabel("Total Grade Points");
-		 lblNewLabel_8.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		 lblNewLabel_8.setBounds(378, 299, 124, 14);
-		 contentPane.add(lblNewLabel_8);
-		 
-		 JLabel lblNewLabel_9 = new JLabel("Final Grade");
-		 lblNewLabel_9.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		 lblNewLabel_9.setBounds(378, 467, 86, 14);
-		 contentPane.add(lblNewLabel_9);
-		 
-		 textField_8 = new JTextField();
-		 textField_8.setBounds(378, 483, 86, 20);
-		 contentPane.add(textField_8);
-		 textField_8.setColumns(10);
-
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
 		scrollPane.setBounds(10, 266, 317, 237);
@@ -181,6 +125,35 @@ public class GradeCalculator extends JFrame {
 		table_1.setModel(model);
 		table_1.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
+		JLabel lblNewLabel_3 = new JLabel("Course Name");
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_3.setBounds(10, 149, 98, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(141, 147, 185, 20);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		JLabel lblNewLabel_4 = new JLabel("Credits");
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_4.setBounds(10, 185, 63, 14);
+		contentPane.add(lblNewLabel_4);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(141, 183, 185, 20);
+		contentPane.add(textField_3);
+		textField_3.setColumns(10);
+		
+		JLabel lblNewLabel_5 = new JLabel("Grade");
+		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_5.setBounds(10, 221, 46, 14);
+		contentPane.add(lblNewLabel_5);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(141, 219, 185, 20);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Add Course Data");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -321,18 +294,50 @@ public class GradeCalculator extends JFrame {
 				
 			}
 		});
-		
 		btnNewButton_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		btnNewButton_3.setBounds(378, 251, 158, 23);
 		contentPane.add(btnNewButton_3);
 		
+		textField_5 = new JTextField();
+		textField_5.setBounds(378, 436, 86, 20);
+		contentPane.add(textField_5);
+		textField_5.setColumns(10);
 		
-
-
-
+		JLabel lblNewLabel_6 = new JLabel("Final GPA");
+		lblNewLabel_6.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_6.setBounds(378, 411, 88, 14);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("Total Credits");
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_7.setBounds(378, 355, 86, 14);
+		contentPane.add(lblNewLabel_7);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(378, 380, 86, 20);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(378, 324, 86, 20);
+		contentPane.add(textField_7);
+		textField_7.setColumns(10);
+		
+		JLabel lblNewLabel_8 = new JLabel("Total Grade Points");
+		lblNewLabel_8.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_8.setBounds(378, 299, 124, 14);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("Final Grade");
+		lblNewLabel_9.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_9.setBounds(378, 467, 86, 14);
+		contentPane.add(lblNewLabel_9);
+		
+		textField_8 = new JTextField();
+		textField_8.setBounds(378, 483, 86, 20);
+		contentPane.add(textField_8);
+		textField_8.setColumns(10);
 		
 		
-		
-
-
-
+	}
+}
