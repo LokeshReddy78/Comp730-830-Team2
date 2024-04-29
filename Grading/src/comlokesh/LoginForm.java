@@ -76,4 +76,9 @@ public class LoginForm extends JFrame {
 		lblNewLabel.setBounds(50, 133, 123, 25);
 		contentPane.add(lblNewLabel);
 		
+		JLabel lblNewLabel_1 = new JLabel("PASSWORD");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel_1.setBounds(51, 182, 132, 14);
+		contentPane.add(lblNewLabel_1);
+		
 		
