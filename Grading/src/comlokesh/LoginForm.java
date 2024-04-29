@@ -104,4 +104,50 @@ public class LoginForm extends JFrame {
 			}
 		});
 		
+		JButton btnNewButton = new JButton("LOGIN");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HashMap<String, String> users = new HashMap<String, String>();
+				users.put("andy", "@ndy123#");
+				users.put("brad", "br@d123#");
+				users.put("Katharyn", "123456");
+				users.put("diego", "d13go#");
+				users.put("lokesh", "123456");
+				String pwd = new String(passwordField.getPassword());
+
+				if (users.containsKey(textField_1.getText())){
+					if (users.get(textField_1.getText()).equals(pwd)) {
+						JOptionPane.showMessageDialog(btnNewButton, "Login Successful");
+						GradeCalculator frame = new GradeCalculator();
+						frame.setVisible(true);
+					}
+					else {
+						JOptionPane.showMessageDialog(btnNewButton, "Incorrect Password");
+					}
+				}
+				else {
+					JOptionPane.showMessageDialog(btnNewButton, "User Not Authorized");
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton.setBounds(70, 269, 89, 23);
+		contentPane.add(btnNewButton);
 		
+		JButton btnReset = new JButton("RESET");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				passwordField.setText("");
+				textField_1.setText("");
+			}
+		});
+		btnReset.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnReset.setBounds(183, 269, 89, 23);
+		contentPane.add(btnReset);
+		
+		
+		
+		
+		
+	}
+}
