@@ -90,4 +90,18 @@ public class LoginForm extends JFrame {
 		passwordField.setBounds(183, 181, 159, 20);
 		contentPane.add(passwordField);
 		
+		JCheckBox showPwdCheckBox = new JCheckBox("Show Password");
+		showPwdCheckBox.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		showPwdCheckBox.setBounds(183, 222, 145, 23);
+		contentPane.add(showPwdCheckBox);
+		showPwdCheckBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 if (showPwdCheckBox.isSelected()) {
+		                passwordField.setEchoChar((char) 0);
+		            } else {
+		                passwordField.setEchoChar('*');
+		            }
+			}
+		});
+		
 		
