@@ -81,4 +81,13 @@ public class LoginForm extends JFrame {
 		lblNewLabel_1.setBounds(51, 182, 132, 14);
 		contentPane.add(lblNewLabel_1);
 		
+		textField_1 = new JTextField();
+		textField_1.setBounds(183, 137, 157, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(183, 181, 159, 20);
+		contentPane.add(passwordField);
+		
 		
