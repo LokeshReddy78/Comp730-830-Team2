@@ -57,3 +57,15 @@ public class LoginForm extends JFrame {
 		});
 	}
 
+	/**
+	 * Create the frame.
+	 */
+	public LoginForm(){
+		setTitle("Login Form");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 400, 503);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(253, 245, 230));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		
