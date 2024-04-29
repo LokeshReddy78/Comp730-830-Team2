@@ -68,4 +68,12 @@ public class LoginForm extends JFrame {
 		contentPane.setBackground(new Color(253, 245, 230));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("USER NAME");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblNewLabel.setBounds(50, 133, 123, 25);
+		contentPane.add(lblNewLabel);
+		
 		
