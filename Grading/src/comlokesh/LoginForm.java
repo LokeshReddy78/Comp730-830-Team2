@@ -110,7 +110,7 @@ public class LoginForm extends JFrame {
 				HashMap<String, String> users = new HashMap<String, String>();
 				users.put("andy", "@ndy123#");
 				users.put("brad", "br@d123#");
-				users.put("Katharyn", "123456");
+				users.put("katharyn", "123456");
 				users.put("diego", "d13go#");
 				users.put("lokesh", "123456");
 				String pwd = new String(passwordField.getPassword());
